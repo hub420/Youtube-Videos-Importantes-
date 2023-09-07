@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tutoriales Importantes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename ='styles.css') }}">
+    </head>
+    <body>
+        <h1>Programación Esencial: Tutoriales Clave de YouTube</h1>
+        
+            <head>
+                <title>Tutoriales Database</title>
+              
+            </head>
+            <body>
+                <h1>Cargar a la  Database</h1>
+                <div class="form-container">
+                    <form action="/add_tutoriales" method="post">
+                        <label>Title</label>
+                        <input type="text" name="title" required>
+                        
+                        <label>Author</label>
+                        <input type="text" name="author" required>
+                        
+                        <label>URL</label>
+                        <input type="text" name="url" required>
+                        
+                        <label>Visto</label>
+                        <input type="text" name="visto" required>
+                        
+                        <label>Year</label>
+                        <input type="number" name="year" required>
+                        
+                        <input type="submit" value="Add Tutoriales">
+                    </form>
+                </div>
+                
+                    <h1>Lista de Tutoriales</h1>
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>url</th>
+                            <th>Visto</th>
+                            <th>Year</th>
+                        </tr>
+                        {% for tutorial in tutorialesImportantes %}
+                        <tr>
+                            <td>{{ tutorial['Title'] }}</td>
+                            <td>{{ tutorial['Author'] }}</td>
+                            <td>{{ tutorial['url'] }}</td>
+                            <td>{{ tutorial['Visto'] }}</td>
+                            <td>{{ tutorial['Year'] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                  
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>

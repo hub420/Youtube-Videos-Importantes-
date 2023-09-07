@@ -1,0 +1,43 @@
+
+/*para centrar los titulos h1*/
+h1 {
+    text-align: center;
+}
+
+
+/* Style for the form container */
+.form-container {
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the labels */
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style for the input boxes */
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the submit button */
+.form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for the submit button on hover */
+.form-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
